@@ -7,7 +7,7 @@ CP1404/CP5632 Workshop 04
 Basic functions
 demonstrating various parameters, returns and the use of a main function
 """
-__author__ = 'Lindsay Ward'
+__author__ = 'Michael Gonzalez'
 
 
 def main():
@@ -18,7 +18,10 @@ def main():
 
 def get_limits():
     minimum = int(input("Enter the minimum: "))
-    maximum = int(input("Enter the maximum: "))
+    maximum = int(input("Enter the maximum(must be greater than)" + str(minimum)))
+    while maximum <= minimum:
+        print("Invalid maximum")
+        maximum = int(input("Enter the maximum(must be greater than)" + str(minimum)))
     return minimum, maximum
 
 
